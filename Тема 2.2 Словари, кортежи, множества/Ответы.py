@@ -53,14 +53,30 @@ print('Полученный кортеж: ', tuple(sorted(tuple_1)))
 
 # Задание №2
 print('Задание №2')
+tuple_in = (1,2,3,4,1,3,4,5)
+index = 1
+print('Входной кортеж: ', tuple_in)
+print('Индекс: ', index)
 
-def slicer(any_tuple, element):
-  if element in any_tuple:
-    if any_tuple.count(element) > 1:
-      first_index = any_tuple.index(element)
-      second_index = any_tuple.index(element, first_index + 1) + 1
-      return any_tuple[first_index:second_index]
+def slicer(tuple_in, index):
+  if index in tuple_in:
+    if tuple_in.count(index) > 1:
+      first = tuple_in.index(index)
+      second = tuple_in.index(index, first + 1) + 1
+      return tuple_in[first:second]
     else:
-      return any_tuple[any_tuple.index(element):]
+      return tuple_in[tuple_in.index(index):]
   else:
     return ()
+print('Полученный кортеж: ', slicer(tuple_in, index))
+
+# Задание №3
+print('Задание №3')
+list_in = [1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 9, 0 ,0 ,0 ,0]
+print('Входной лист: ', list_in)
+tuple_out = []
+[tuple_out.append(item) for item in list_in if item not in tuple_out]
+print('Полученный кортеж: ', tuple(tuple_out))
+
+# Задание №4
+print('Задание №4')
