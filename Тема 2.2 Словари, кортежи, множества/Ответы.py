@@ -80,3 +80,44 @@ print('Полученный кортеж: ', tuple(tuple_out))
 
 # Задание №4
 print('Задание №4')
+tuple_in = (
+    ('Егор', 2.2),
+            ('Аня', 3.6),
+            ('Миша', 3.5),
+            ('Женя', 4.2),
+            ('Вася', 5.0),
+            ('Петя', 4.0),
+            ('Володя', 4.3),
+            ('Евгений', 4.6),
+)
+print('Входной кортеж: ', tuple_in)
+def find_student(tuple_in, mark):
+    tuple_out = [student[0] for student in tuple_in if student[1] >= mark]
+    print('Полученный кортеж: ', tuple(tuple_out))
+find_student(tuple_in, 3)
+
+# Множества
+print()
+print('Множества')
+# Задание №1
+print('Задание №1')
+def set_and_power(*lists):
+    print('Входные данные: ', lists)
+    big_list = []
+    for list in lists:
+        big_list.extend(list)
+    set_out = set(big_list)
+    print('Полученное множество: ', set_out, ', мощность: ', len(set_out))
+
+set_and_power(
+    [1, 2, 3, 4],
+    [2, 5, 6, 7, 4]
+)
+
+# Задание №2
+print('Задание №2')
+set_1 = {3, 4, 5, 6, 20}
+set_2 = {4, 6, 7, 8, 9}
+set_3 = {5, 3, 8, 1}
+print('Входные данные: ', set_1, set_2, set_3)
+print('Полученная разность: ', set_1 ^ set_2 ^ set_3)
