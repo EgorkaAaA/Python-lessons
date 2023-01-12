@@ -121,3 +121,30 @@ set_2 = {4, 6, 7, 8, 9}
 set_3 = {5, 3, 8, 1}
 print('Входные данные: ', set_1, set_2, set_3)
 print('Полученная разность: ', set_1 ^ set_2 ^ set_3)
+
+# Задание №3
+print('Задание №3')
+
+def super_set(super_set, *sets):
+    print('Предпалогаемое супермножество: ', super_set)
+    print('Входные данные: ', sets)
+    for set in sets:
+        if super_set > set:
+            print('Множество: ', super_set, ' является супер множеством для: ', set)
+        else:
+            print('Множество: ', super_set, ' не является супер множеством для: ', set)
+super_set({1, 2, 3, 4, 5, 6, 7, 8}, {1, 2, 3}, {9, 0})
+
+# Задание №4
+print('Задание №4')
+def find_repeat(list):
+    print('Входной лсит: ', list)
+    index = 0
+    while index < len(list):
+        cnt = list.count(list[index])
+        if cnt > 1:
+            list[index] = str(list[index]) * cnt
+        index += 1
+
+    print('Полученное множество: ', set(list))
+find_repeat([1, 2, 4, 4, 4])
